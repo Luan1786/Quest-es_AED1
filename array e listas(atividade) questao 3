@@ -1,0 +1,56 @@
+Questão 3
+
+public class Node {
+    public Object item; // dado armazenado (genérico)
+    public Node next;   // referência ao próximo nó
+
+    // TODO: construtor Node(Object item)
+    public Node(Object item) {
+        this.item = item;
+        this.next = null;
+    }
+
+    // TODO: segundo construtor Node(Object item, Node next)
+    public Node(Object item, Node next) {
+        this.item = item;
+        this.next = next;
+    }
+} 
+
+
+public class ListaSimples {
+    private Node head;
+
+    public ListaSimples() {
+        this.head = null;
+    }
+
+    /** Insere 'item' no INICIO da lista (O(1)). */
+    public void insertFirst(Object item) {
+        // TODO: crie um novo Node cujo 'next' aponta para o head atual
+        // TODO: atualize head para apontar para o novo Node
+        
+        // Usando o segundo construtor que criamos na Parte A:
+        Node novoNo = new Node(item, head);
+        this.head = novoNo;
+    }
+
+    /** Percorre a lista e imprime todos os elementos. */
+    public void imprimir() {
+        Node atual = head;
+        while (atual != null) {
+            System.out.print(atual.item + " -> ");
+            atual = atual.next; // Move para o próximo nó
+        }
+        System.out.println("null");
+    }
+
+    public static void main(String[] args) {
+        ListaSimples lista = new ListaSimples();
+        lista.insertFirst("C");
+        lista.insertFirst("B");
+        lista.insertFirst("A");
+        
+        lista.imprimir(); // Saída Esperada: A -> B -> C -> null
+    }
+}
