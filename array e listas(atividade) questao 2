@@ -1,0 +1,20 @@
+Questão 2
+
+/** Remove o elemento na posicao 'indice'. */
+public void remove(int indice) {
+    if (indice < 0 || indice >= tamanho)
+        throw new IndexOutOfBoundsException("Indice invalido: " + indice);
+
+    // TODO 1: desloque cada elemento de (indice + 1) ate (tamanho - 1)
+    // uma posicao para a esquerda.
+    for (int i = indice; i < tamanho - 1; i++) {
+        dados[i] = dados[i + 1];
+    }
+
+    // TODO 2: decremente 'tamanho'
+    tamanho--;
+    
+    // Opcional: Limpar a última posição técnica para evitar "memory leak" de referências
+    // (Em arrays de tipos primitivos como int não é obrigatório, mas boa prática em objetos)
+    // dados[tamanho] = 0; 
+}
