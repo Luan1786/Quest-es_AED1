@@ -1,0 +1,7 @@
+Questão 6
+
+a) porque no array os elementos sao contiguos, sao sequenciais, ou seja, é necessário abrir espaço para inserir um elemento, e na lista encadeada possui nós que referenciam os elementos, entao para adicionar é necessário apenas redirecionar esses ponteiros
+
+b) array, porque os dados sao diretos, complexidade constante, ja na lista os dados sao sequenciais, complexidade linear, sendo necessario percorrer toda a lista
+
+c)seria possivel, teria que utilizar uma estrategia de divisão para gerar uma conexão entre elementos distantes, mas seria necessario deslocar todos os elementos para realizar a remoção, o que aumentaria a complexidade do problema, entao seria menos eficiente que uma lista ligada que apenas muda os ponteiros, com complexidade constante
