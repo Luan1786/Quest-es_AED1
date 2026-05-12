@@ -1,0 +1,31 @@
+Questao 4
+
+/** Retorna a referencia do primeiro no que contem 'item', ou null se nao encontrar. */
+public Node find(Object item) {
+    Node atual = head;
+    
+    // TODO: percorra a lista comparando atual.item com 'item'
+    while (atual != null) {
+        // Use .equals() para comparar objetos com segurança
+        if (atual.item.equals(item)) {
+            return atual; // Retorna o nó (a referência) onde o item está
+        }
+        atual = atual.next;
+    }
+    
+    // Se o laço terminar, significa que chegou ao fim (null) sem encontrar
+    return null;
+}
+
+/** Insere um novo no com 'item' APOS o no 'x'. */
+public void insertAfter(Node x, Object item) {
+    if (x == null) return;
+
+    // TODO 1: crie um novo Node com 'item'
+    // TODO 2: faca novo.next = x.next (o novo aponta para quem vinha depois de x)
+    // TODO 3: faca x.next = novo (x agora aponta para o novo)
+    
+    Node novo = new Node(item);
+    novo.next = x.next;
+    x.next = novo;
+}
